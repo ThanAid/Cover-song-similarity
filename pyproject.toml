@@ -1,0 +1,21 @@
+[project]
+name = "Cover-song-similarity"
+version = "0.1.0"
+description = "Finds similarity score for tracks"
+authors = [
+    { name = "ThanAid", email = "thanos.aidins@gmail.com" }
+]
+readme = "README.md"
+dependencies = [
+    "matplotlib>=3.10.0",
+    "numpy>=2.0.0",
+    "h5py>=3.12.1",
+    "librosa==0.10.2.post1",
+    "tensorflow==2.18.0",
+    "loguru==0.7.3",
+    "tqdm==4.67.1"
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
