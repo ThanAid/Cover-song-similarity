@@ -6,17 +6,18 @@ def create_base_network(input_shape):
     """Create the base network for the Siamese network"""
     model = models.Sequential([
         layers.Input(shape=input_shape),
-        layers.Conv1D(64, 3, activation='relu', kernel_regularizer=regularizers.l2(0.01)),
+        layers.Conv1D(64, 3, activation='relu'),
         layers.MaxPooling1D(2),
-        layers.Dropout(0.3),
-        layers.Conv1D(128, 3, activation='relu', kernel_regularizer=regularizers.l2(0.01)),
+        layers.Dropout(0.4),
+        layers.Conv1D(128, 3, activation='relu'),
         layers.MaxPooling1D(2),
+        layers.Dropout(0.2),
         layers.Flatten(),
-        layers.Dense(128, activation='relu', kernel_regularizer=regularizers.l2(0.01)),
-        layers.Dropout(0.3),
-        layers.Dense(64, activation='relu', kernel_regularizer=regularizers.l2(0.01))
+        layers.Dense(128, activation='relu'),
+        layers.Dense(64, activation='relu')
     ])
     return model
+
 class CosineSimilarityLayer(layers.Layer):
     """
     Custom layer to compute cosine similarity.
