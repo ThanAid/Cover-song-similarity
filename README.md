@@ -2,6 +2,8 @@
 
 Cover-song-similarity is a Python project designed to calculate similarity scores between songs. It preprocesses musical data, trains a Siamese Convolutional Neural Network (CNN) to detect tonal similarities, and provides an API to inference the trained model. The system leverages the Da-TACOS dataset and employs Docker for seamless deployment.
 
+Detailed analysis on this project can be found in this [report](Cover_Similarity_Aidinis.pdf)
+
 ---
 
 ## Dataset
