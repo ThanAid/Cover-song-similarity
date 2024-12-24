@@ -16,7 +16,6 @@ from tqdm import tqdm
 import os
 from loguru import logger
 import gc
-import h5py
 
 class PreproPipeline:
     def __init__(self, data: dict, dissimilar_percentage: float, max_length: int, save_path: str = "") -> None:
